@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.random-numbers {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-input {
+    margin-bottom: 20px;
+}
+
+.user-input input {
+    font-size: 24px;
+    padding: 5px;
+}
+
+.number-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Üçlü sıralama için sabit genişlik */
+    grid-gap: 5px; /* Butonlar arasındaki boşluk */
+    justify-content: center; /* Butonları ortaya hizalama */
+    margin-bottom: 20px;
+}
+
+.number-buttons button {
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%; /* Buton genişliğini tamamlamak için yüzde genişlik */
+    height: 50px; /* Sabit yükseklik */
+    border-radius: 4px;
+}
+
+button {
+    background-color: #888b88;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #1e35bb;
+}
+
+button:active {
+    background-color: #888b88;
+}
+#check-button {
+    font-size: 24px;
+    padding: 10px 20px;
+}

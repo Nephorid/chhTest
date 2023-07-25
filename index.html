@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rakam Doğrulama</title>
-    <style>
-        .button {
-            display: inline-block;
-            padding: 10px;
-            margin: 5px;
-            font-size: 20px;
-            cursor: pointer;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
+    <title>1,12-3B</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h2>Lütfen aşağıdaki butonlardan rakamları sırasıyla tıklayarak doğrulama yapın:</h2>
-    <div id="captcha"></div>
-    <script src="captcha.js"></script>
+    <div class="container">
+        <h1>1,12-3B captcha mesq </h1>
+        <div class="random-numbers" id="random-numbers"></div>
+        <div class="user-input">
+            <input type="text" id="user-input" readonly>
+        </div>
+        <div class="number-buttons" id="number-buttons">
+            <!-- Butonlar burada olacak, JavaScript ile oluşturulacaklar. -->
+        </div>
+        <button id="check-button" onclick="checkNumbers()">İleri</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
