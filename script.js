@@ -32,11 +32,18 @@ function createNumberButtons() {
 }
 
 function addNumber(number) {
-    userInput.value += number;
+    if (userInput.value.length < 5) {
+        userInput.value += number;
+    }
 }
 
 function checkNumbers() {
     const userEnteredNumbers = userInput.value;
+    if (userEnteredNumbers.length !== 5) {
+        alert('5 regem yazmaliydin artiqin nece bacardin?.');
+        userInput.value = '';
+        return;
+    }
 
     let isCorrect = true;
     for (let i = 0; i < 5; i++) {
@@ -47,12 +54,12 @@ function checkNumbers() {
     }
 
     if (isCorrect) {
-        alert('Ardicilliq Dogrudur!');
+        alert('Ardıcıllıq Düzdür.');
         generateRandomNumbers();
         userInput.value = '';
         shuffleButtons();
     } else {
-        alert('Ardicilliq Sehvdir!');
+        alert('Ardıcıllıq Sehvdir !!!!!!!!');
         userInput.value = '';
     }
 }
