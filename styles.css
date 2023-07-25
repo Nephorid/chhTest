@@ -25,9 +25,9 @@ body {
 
 .number-buttons {
     display: grid;
-    grid-template-columns: repeat(3, 100px); /* Üçlü sıralama için sabit genişlik */
-    grid-gap: 5px; /* Butonlar arasındaki boşluk */
-    justify-content: center; /* Butonları ortaya hizalama */
+    grid-template-columns: repeat(3, 100px); 
+    grid-gap: 5px; 
+    justify-content: center; 
     margin-bottom: 20px;
 }
 
@@ -35,8 +35,8 @@ body {
     font-size: 18px;
     padding: 5px;
     cursor: pointer;
-    width: 100%; /* Buton genişliğini tamamlamak için yüzde genişlik */
-    height: 50px; /* Sabit yükseklik */
+    width: 100%;
+    height: 50px; 
     border-radius: 4px;
 }
 
