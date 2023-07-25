@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTCHA</title>
+</head>
+<body>
+  <h1>CAPTCHA</h1>
+  <p>Lütfen aşağıdaki rakamları doğru sırayla girin:</p>
+  <input type="text" name="captcha" />
+  <input type="submit" value="Submit" />
+
+  <script>
+    function generateRandomNumbers() {
+      var numbers = [];
+      for (var i = 0; i < 4; i++) {
+        numbers.push(Math.floor(Math.random() * 10));
+      }
+      return numbers;
+    }
+
+    function shuffleNumbers(numbers) {
+      var shuffledNumbers = [];
+      for (var i = 0; i < numbers.length; i++) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
+      }
+      return shuffledNumbers;
+    }
+
+    function showCAPTCHA() {
+      var numbers = generateRandomNumbers();
+      var shuffledNumbers = shuffleNumbers(numbers);
+      var html = "";
+      for (var i = 0; i < shuffledNumbers.length; i++) {
+        html += "<input type='button' value='" + shuffledNumbers[i] + "' />";
+      }
+      $("#captcha").html(html);
+    }
+
+    $(document).ready(function() {
+      showCAPTCHA();
+    });
+  </script>
+</body>
+</html>
