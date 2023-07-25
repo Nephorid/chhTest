@@ -1,47 +1,23 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>CAPTCHA</title>
+    <title>Rakam Doğrulama</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <h1>CAPTCHA</h1>
-  <p>Lütfen aşağıdaki rakamları doğru sırayla girin:</p>
-  <input type="text" name="captcha" />
-  <input type="submit" value="Submit" />
-
-  <script>
-    function generateRandomNumbers() {
-      var numbers = [];
-      for (var i = 0; i < 4; i++) {
-        numbers.push(Math.floor(Math.random() * 10));
-      }
-      return numbers;
-    }
-
-    function shuffleNumbers(numbers) {
-      var shuffledNumbers = [];
-      for (var i = 0; i < numbers.length; i++) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = numbers[i];
-        numbers[i] = numbers[j];
-        numbers[j] = temp;
-      }
-      return shuffledNumbers;
-    }
-
-    function showCAPTCHA() {
-      var numbers = generateRandomNumbers();
-      var shuffledNumbers = shuffleNumbers(numbers);
-      var html = "";
-      for (var i = 0; i < shuffledNumbers.length; i++) {
-        html += "<input type='button' value='" + shuffledNumbers[i] + "' />";
-      }
-      $("#captcha").html(html);
-    }
-
-    $(document).ready(function() {
-      showCAPTCHA();
-    });
-  </script>
+    <h2>Lütfen aşağıdaki butonlardan rakamları sırasıyla tıklayarak doğrulama yapın:</h2>
+    <div id="captcha"></div>
+    <script src="captcha.js"></script>
 </body>
 </html>
