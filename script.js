@@ -40,7 +40,7 @@ function addNumber(number) {
 function checkNumbers() {
     const userEnteredNumbers = userInput.value;
     if (userEnteredNumbers.length !== 5) {
-        alert('5 regem yazmaliydin artiqin nece bacardin?.');
+        alert('sehvdir.');
         userInput.value = '';
         return;
     }
